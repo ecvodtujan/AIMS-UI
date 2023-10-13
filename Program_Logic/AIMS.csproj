@@ -1,0 +1,756 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9EAC23A0-C249-4E62-8505-CF3BD1DABCD6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AIMS</RootNamespace>
+    <AssemblyName>AIMS</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>d:\PUBLISH\ASSET\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.1.1.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Asset Tag.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3B6CC87350DC3A5A69B9D9D846A0BFB37744B957</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AMS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AMSLogic">
+      <HintPath>..\..\..\AMSLogic\AMSLogic\CharlesLogic\bin\Debug\AMSLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.CrystalReports.Engine\13.0.2000.0__692fbea5521e1304\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.ReportSource\13.0.2000.0__692fbea5521e1304\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.Shared\13.0.2000.0__692fbea5521e1304\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\CrystalDecisions.Windows.Forms\13.0.2000.0__692fbea5521e1304\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QRCoder">
+      <HintPath>..\..\..\..\..\ZMG SYSDEV\SHARED\WINFORM\QRCoder.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsToolkit">
+      <HintPath>..\..\..\..\..\ZMG SYSDEV\SHARED\WINFORM\WindowsFormsToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing">
+      <HintPath>..\..\..\..\..\ZMG SYSDEV\SHARED\WINFORM\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation">
+      <HintPath>..\..\..\..\..\ZMG SYSDEV\SHARED\WINFORM\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Aboutform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Aboutform.designer.cs">
+      <DependentUpon>Aboutform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\mdiMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\mdiMain.Designer.cs">
+      <DependentUpon>mdiMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ToolsControl.cs" />
+    <Compile Include="Inquiry\AssetMonitoringform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\AssetMonitoringform.Designer.cs">
+      <DependentUpon>AssetMonitoringform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\EmployeeMonitoringform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\EmployeeMonitoringform.Designer.cs">
+      <DependentUpon>EmployeeMonitoringform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\DeactivatedAssetMonitoringform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\DeactivatedAssetMonitoringform.Designer.cs">
+      <DependentUpon>DeactivatedAssetMonitoringform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\MobileMonitoringform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\MobileMonitoringform.Designer.cs">
+      <DependentUpon>MobileMonitoringform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\GatePassMonitoringform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\GatePassMonitoringform.Designer.cs">
+      <DependentUpon>GatePassMonitoringform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\IssuanceMonitoringform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\IssuanceMonitoringform.Designer.cs">
+      <DependentUpon>IssuanceMonitoringform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\PurchaseMonitoringform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\PurchaseMonitoringform.Designer.cs">
+      <DependentUpon>PurchaseMonitoringform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\RequestMonitoringform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\RequestMonitoringform.Designer.cs">
+      <DependentUpon>RequestMonitoringform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\Searchform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\Searchform.Designer.cs">
+      <DependentUpon>Searchform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\HurisLinkMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\HurisLinkMasterform.Designer.cs">
+      <DependentUpon>HurisLinkMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Asset\AssetDocumentcontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Asset\AssetDocumentcontrol.Designer.cs">
+      <DependentUpon>AssetDocumentcontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Asset\AssetInformationcontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Asset\AssetInformationcontrol.Designer.cs">
+      <DependentUpon>AssetInformationcontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Asset\AssetOwnerHistorycontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Asset\AssetOwnerHistorycontrol.Designer.cs">
+      <DependentUpon>AssetOwnerHistorycontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Asset\AssetRepairHistorycontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Asset\AssetRepairHistorycontrol.Designer.cs">
+      <DependentUpon>AssetRepairHistorycontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Asset\GenerateQRcodeform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Asset\GenerateQRcodeform.Designer.cs">
+      <DependentUpon>GenerateQRcodeform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\BrandMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\BrandMasterform.Designer.cs">
+      <DependentUpon>BrandMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\CompanyMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\CompanyMasterform.designer.cs">
+      <DependentUpon>CompanyMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\AssetMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\AssetMasterform.Designer.cs">
+      <DependentUpon>AssetMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\DocumentTypeMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\DocumentTypeMasterform.Designer.cs">
+      <DependentUpon>DocumentTypeMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Employee\EmployeeInformationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Employee\EmployeeInformationControl.Designer.cs">
+      <DependentUpon>EmployeeInformationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\EmployeeNewMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\EmployeeNewMasterform.Designer.cs">
+      <DependentUpon>EmployeeNewMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Employee\EmployeeAssetHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Employee\EmployeeAssetHistory.Designer.cs">
+      <DependentUpon>EmployeeAssetHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\AssetTagSeriesMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\AssetTagSeriesMasterform.Designer.cs">
+      <DependentUpon>AssetTagSeriesMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\DepartmentNewMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\DepartmentNewMasterform.Designer.cs">
+      <DependentUpon>DepartmentNewMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\DesignationMasterfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\DesignationMasterfile.Designer.cs">
+      <DependentUpon>DesignationMasterfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\GarbageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\GarbageForm.Designer.cs">
+      <DependentUpon>GarbageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\MobileMasterfrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\MobileMasterfrom.Designer.cs">
+      <DependentUpon>MobileMasterfrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\PlanMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\PlanMasterform.Designer.cs">
+      <DependentUpon>PlanMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Plan\PlanInclusioncontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Plan\PlanInclusioncontrol.Designer.cs">
+      <DependentUpon>PlanInclusioncontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Plan\PlanInclusivecontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Plan\PlanInclusivecontrol.Designer.cs">
+      <DependentUpon>PlanInclusivecontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\Plan\PlanUpgradecontrol.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MasterFile\Plan\PlanUpgradecontrol.Designer.cs">
+      <DependentUpon>PlanUpgradecontrol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\ReasonMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\ReasonMasterform.Designer.cs">
+      <DependentUpon>ReasonMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\LocationMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\LocationMasterform.Designer.cs">
+      <DependentUpon>LocationMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\SupplierMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\SupplierMasterform.Designer.cs">
+      <DependentUpon>SupplierMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\ItemTypeMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\ItemTypeMasterform.designer.cs">
+      <DependentUpon>ItemTypeMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\UserMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\UserMasterform.Designer.cs">
+      <DependentUpon>UserMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Report control\ByDateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Report\Report control\ByDateControl.Designer.cs">
+      <DependentUpon>ByDateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportForm.Designer.cs">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Report control\ByCompanyControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Report\Report control\ByCompanyControl.Designer.cs">
+      <DependentUpon>ByCompanyControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportViewerform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\ReportViewerform.Designer.cs">
+      <DependentUpon>ReportViewerform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Deactivate\AssetDeactivateform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Deactivate\AssetDeactivateform.Designer.cs">
+      <DependentUpon>AssetDeactivateform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\GatePass\GatePassMasterform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\GatePass\GatePassMasterform.Designer.cs">
+      <DependentUpon>GatePassMasterform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Issuance\AssetIssuanceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Issuance\AssetIssuanceForm.Designer.cs">
+      <DependentUpon>AssetIssuanceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Issuance\AssetPulloutform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Issuance\AssetPulloutform.Designer.cs">
+      <DependentUpon>AssetPulloutform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Purchase\Purchaseform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Purchase\Purchaseform.Designer.cs">
+      <DependentUpon>Purchaseform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Reactivate\AssetReactivateform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Reactivate\AssetReactivateform.Designer.cs">
+      <DependentUpon>AssetReactivateform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\RequestForPayment\RequestforPayementApprovalform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\RequestForPayment\RequestforPayementApprovalform.Designer.cs">
+      <DependentUpon>RequestforPayementApprovalform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\RequestForPayment\RequestforPaymentReceiveform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\RequestForPayment\RequestforPaymentReceiveform.Designer.cs">
+      <DependentUpon>RequestforPaymentReceiveform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\PurchaseOrderform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\PurchaseOrderform.Designer.cs">
+      <DependentUpon>PurchaseOrderform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\garbageform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\garbageform.Designer.cs">
+      <DependentUpon>garbageform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\IssuedRequestform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\IssuedRequestform.Designer.cs">
+      <DependentUpon>IssuedRequestform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\PurchaseRequestform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\PurchaseRequestform.Designer.cs">
+      <DependentUpon>PurchaseRequestform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\ReceiveRequestdetailsform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\ReceiveRequestdetailsform.Designer.cs">
+      <DependentUpon>ReceiveRequestdetailsform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\ReceiveRequestform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\ReceiveRequestform.Designer.cs">
+      <DependentUpon>ReceiveRequestform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\RequestDetailform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\RequestDetailform.Designer.cs">
+      <DependentUpon>RequestDetailform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\RequestDocumentform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\RequestDocumentform.Designer.cs">
+      <DependentUpon>RequestDocumentform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Request\Requestform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Request\Requestform.Designer.cs">
+      <DependentUpon>Requestform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\AlertCustom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\RequestForPayment\RequestforPaymentMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\RequestForPayment\RequestforPaymentMonitoring.Designer.cs">
+      <DependentUpon>RequestforPaymentMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\RequestForPayment\RequestforPaymentform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\RequestForPayment\RequestforPaymentform.Designer.cs">
+      <DependentUpon>RequestforPaymentform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\Aboutform.resx">
+      <DependentUpon>Aboutform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\mdiMain.resx">
+      <DependentUpon>mdiMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\AssetMonitoringform.resx">
+      <DependentUpon>AssetMonitoringform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\DeactivatedAssetMonitoringform.resx">
+      <DependentUpon>DeactivatedAssetMonitoringform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\EmployeeMonitoringform.resx">
+      <DependentUpon>EmployeeMonitoringform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\GatePassMonitoringform.resx">
+      <DependentUpon>GatePassMonitoringform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\MobileMonitoringform.resx">
+      <DependentUpon>MobileMonitoringform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\PurchaseMonitoringform.resx">
+      <DependentUpon>PurchaseMonitoringform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\RequestMonitoringform.resx">
+      <DependentUpon>RequestMonitoringform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\Searchform.resx">
+      <DependentUpon>Searchform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\HurisLinkMasterform.resx">
+      <DependentUpon>HurisLinkMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Asset\AssetDocumentcontrol.resx">
+      <DependentUpon>AssetDocumentcontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Asset\AssetInformationcontrol.resx">
+      <DependentUpon>AssetInformationcontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Asset\AssetOwnerHistorycontrol.resx">
+      <DependentUpon>AssetOwnerHistorycontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Asset\AssetRepairHistorycontrol.resx">
+      <DependentUpon>AssetRepairHistorycontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Asset\GenerateQRcodeform.resx">
+      <DependentUpon>GenerateQRcodeform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\BrandMasterform.resx">
+      <DependentUpon>BrandMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\CompanyMasterform.resx">
+      <DependentUpon>CompanyMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\AssetMasterform.resx">
+      <DependentUpon>AssetMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\DocumentTypeMasterform.resx">
+      <DependentUpon>DocumentTypeMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Employee\EmployeeInformationControl.resx">
+      <DependentUpon>EmployeeInformationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\EmployeeNewMasterform.resx">
+      <DependentUpon>EmployeeNewMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Employee\EmployeeAssetHistory.resx">
+      <DependentUpon>EmployeeAssetHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\AssetTagSeriesMasterform.resx">
+      <DependentUpon>AssetTagSeriesMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\DepartmentNewMasterform.resx">
+      <DependentUpon>DepartmentNewMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\DesignationMasterfile.resx">
+      <DependentUpon>DesignationMasterfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\GarbageForm.resx">
+      <DependentUpon>GarbageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\MobileMasterfrom.resx">
+      <DependentUpon>MobileMasterfrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\PlanMasterform.resx">
+      <DependentUpon>PlanMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Plan\PlanInclusioncontrol.resx">
+      <DependentUpon>PlanInclusioncontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Plan\PlanInclusivecontrol.resx">
+      <DependentUpon>PlanInclusivecontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\Plan\PlanUpgradecontrol.resx">
+      <DependentUpon>PlanUpgradecontrol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\ReasonMasterform.resx">
+      <DependentUpon>ReasonMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\ItemTypeMasterform.resx">
+      <DependentUpon>ItemTypeMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\LocationMasterform.resx">
+      <DependentUpon>LocationMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\SupplierMasterform.resx">
+      <DependentUpon>SupplierMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\UserMasterform.resx">
+      <DependentUpon>UserMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Report\Report control\ByCompanyControl.resx">
+      <DependentUpon>ByCompanyControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Report control\ByDateControl.resx">
+      <DependentUpon>ByDateControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportForm.resx">
+      <DependentUpon>ReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportViewerform.resx">
+      <DependentUpon>ReportViewerform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Deactivate\AssetDeactivateform.resx">
+      <DependentUpon>AssetDeactivateform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\GatePass\GatePassMasterform.resx">
+      <DependentUpon>GatePassMasterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Issuance\AssetIssuanceForm.resx">
+      <DependentUpon>AssetIssuanceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Issuance\AssetPulloutform.resx">
+      <DependentUpon>AssetPulloutform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Purchase\Purchaseform.resx">
+      <DependentUpon>Purchaseform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Reactivate\AssetReactivateform.resx">
+      <DependentUpon>AssetReactivateform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\RequestForPayment\RequestforPayementApprovalform.resx">
+      <DependentUpon>RequestforPayementApprovalform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\RequestForPayment\RequestforPaymentReceiveform.resx">
+      <DependentUpon>RequestforPaymentReceiveform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\garbageform.resx">
+      <DependentUpon>garbageform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\IssuedRequestform.resx">
+      <DependentUpon>IssuedRequestform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\PurchaseOrderform.resx">
+      <DependentUpon>PurchaseOrderform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\PurchaseRequestform.resx">
+      <DependentUpon>PurchaseRequestform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\ReceiveRequestdetailsform.resx">
+      <DependentUpon>ReceiveRequestdetailsform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\ReceiveRequestform.resx">
+      <DependentUpon>ReceiveRequestform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\RequestDetailform.resx">
+      <DependentUpon>RequestDetailform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\RequestDocumentform.resx">
+      <DependentUpon>RequestDocumentform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Request\Requestform.resx">
+      <DependentUpon>Requestform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\AlertCustom.resx">
+      <DependentUpon>AlertCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\RequestForPayment\RequestforPaymentMonitoring.resx">
+      <DependentUpon>RequestforPaymentMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\RequestForPayment\RequestforPaymentform.resx">
+      <DependentUpon>RequestforPaymentform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AMS_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Asset Tag.ico" />
+    <Content Include="Images\Cancel.ico" />
+    <Content Include="Images\stickered.ico" />
+    <Content Include="Images\ZMG-asia-logo.png" />
+    <None Include="Resources\dash.ico" />
+    <None Include="Resources\check.ico" />
+    <None Include="Resources\Cancel-.ico" />
+    <None Include="Resources\stickered.ico" />
+    <None Include="Resources\Word-32.png" />
+    <None Include="Resources\Reader-48.gif" />
+    <None Include="Resources\PowerPoint-48.gif" />
+    <None Include="Resources\Excel-48.gif" />
+    <None Include="Resources\Save%282%29.ico" />
+    <None Include="Resources\JPG.ico" />
+    <None Include="Resources\Information.ico" />
+    <None Include="Resources\Cancel.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
