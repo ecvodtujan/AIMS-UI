@@ -84,3 +84,4 @@ C:\ZMG Program\ZMG SYSTEM\AIMS\AMS\Program_Logic\obj\Debug\AIMS.exe.manifest
 C:\ZMG Program\ZMG SYSTEM\AIMS\AMS\Program_Logic\obj\Debug\AIMS.application
 C:\ZMG Program\ZMG SYSTEM\AIMS\AMS\Program_Logic\obj\Debug\AIMS.exe
 C:\ZMG Program\ZMG SYSTEM\AIMS\AMS\Program_Logic\obj\Debug\AIMS.pdb
+C:\ZMG Program\ZMG SYSTEM\AIMS\AMS\Program_Logic\obj\Debug\AIMS.csprojResolveAssemblyReference.cache

@@ -22,7 +22,7 @@ namespace AMS.MasterFile
         public int _asset_id = 0;
       //  public int _test_variable = 0;
    //   public bool _active = true;
-
+   // test only 10132023
         public object AssetInformationcontrol { get; internal set; }
 
         public void testpublic()
