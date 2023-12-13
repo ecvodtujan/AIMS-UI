@@ -104,7 +104,6 @@ C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\bin\Debug\stdole.dll
 C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\bin\Debug\ShockwaveFlashObjects.dll
 C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\bin\Debug\AMSLogic.pdb
 C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\bin\Debug\DevComponents.DotNetBar2.xml
-C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\obj\Debug\AIMS.csprojResolveAssemblyReference.cache
 C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\obj\Debug\AMS.Admin.Aboutform.resources
 C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\obj\Debug\AMS.Admin.LoginForm.resources
 C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\obj\Debug\AMS.Admin.mdiMain.resources
