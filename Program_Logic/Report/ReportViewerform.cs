@@ -11,6 +11,8 @@ using System.Globalization;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
 using AIMS.Report;
+using AMSLogic.Master.Repository;
+using AMSLogic.Model;
 
 namespace AMS.Report
 {
@@ -21,6 +23,8 @@ namespace AMS.Report
         public int _plan_id = 0;
         public int _emp_id = 0;
 
+        public int _companyid = 0;
+
         public bool _by_itemtype = true;
         public int _itemtype_id = 0;
         public bool _by_brand = true;
@@ -29,6 +33,7 @@ namespace AMS.Report
         public string _datevalue = "";
         public DateTime _from = DateTime.Parse("2022-01-01");
         public DateTime _to = DateTime.Parse("2022-12-31");
+    
                
         
         public bool _bycompany = true;
@@ -40,6 +45,11 @@ namespace AMS.Report
         public string _supplier = "";
         public string _total = "";
 
+        CompanyRepository _comp = new CompanyRepository();
+        //  SYS_COMPANY _empcomp = _comp.GetCompany()
+        EmployeeRepository _e = new EmployeeRepository();
+        
+        
 
         public ReportViewerform(string _Reporttype)
         {
@@ -50,13 +60,14 @@ namespace AMS.Report
         void DisplayReport()
         {
             ReportDocument _reportdoc = new ReportDocument();
+            EMP_EMPLOYEE _emp = _e.GetCompanybyEmployee(_emp_id);
+            _companyid = _emp.company_id;
 
             ReportForm _form = new ReportForm();
 
-           //string _report_path = @"C:\ZMG SYSTEM\ASSET\Report\";
-            //string _report_path = @"\\whzmg-dirsync\zmg\ASSET\Report\";
-           // string _report_path = @"C:\Users\eclvillanueva\Documents\PO AIMS\Report\";
             string _report_path = @"\\192.168.20.21\it teamfiles\ZMG System\AIMS\Reports\";
+
+
             try
             {
 
@@ -140,9 +151,25 @@ namespace AMS.Report
                 }
                 else if (_reporttype == "ACCOUNTABILITY PRINT OUT")
                 {
-                    _reportdoc.Load(_report_path + @"Employee AccountabilityForm.rpt");
-                    _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
-                    goto Report_Path;
+                    if (_companyid == 1 || _companyid == 7)   //ZMG and APS accountability
+                    {
+                        _reportdoc.Load(_report_path + @"ZMGAccountabilityForm.rpt");
+                        _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
+                        goto Report_Path;
+                    }
+                    else if(_companyid == 3 || _companyid == 11)  // apw and apwtech
+                    {
+                        _reportdoc.Load(_report_path + @"APWAccountabilityForm.rpt");
+                        _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
+                        goto Report_Path;
+                    }
+                    else if (_companyid == 8)  // asiaselect
+                    {
+                        _reportdoc.Load(_report_path + @"ASIAccountabilityForm.rpt");
+                        _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
+                        goto Report_Path;
+                    }
+
                 }
 
                 else if (_reporttype == "ASSET REPORT BY COMPANY")
@@ -178,7 +205,7 @@ namespace AMS.Report
                 else if (_reporttype == "ASSET REPORT BY ITEMTYPE")
                 {
                     _reportdoc.Load(_report_path + @"Asset Master file by ItemType.rpt");
-                    //_reportdoc.DataDefinition.FormulaFields["itemtype"].Text = "'" + _companyname + "'";
+     
                     _reportdoc.SetParameterValue("@BY_ITEMTYPE", _by_itemtype);
                     _reportdoc.SetParameterValue("@ITEMTYPE_ID", _itemtype_id);
                     goto Report_Path;

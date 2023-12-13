@@ -113,26 +113,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AIMS.exe" size="8174592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AIMS.exe" size="8175104">
       <assemblyIdentity name="AIMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>iS8U8z9peli9sWZZo2xrqLGjcK0=</dsig:DigestValue>
+        <dsig:DigestValue>wCDUji8CLfgAFqlMpPcGw7SeIrE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMSLogic.dll" size="208896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AMSLogic.dll" size="209408">
       <assemblyIdentity name="AMSLogic" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>TY/+Q8w8KK000aflLYEiTcj5peg=</dsig:DigestValue>
+        <dsig:DigestValue>WTev5bhUSt4zQT1+F6qVj9v6iVw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

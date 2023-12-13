@@ -71,8 +71,9 @@
     <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AMSLogic">
-      <HintPath>..\..\..\AMSLogic\AMSLogic\CharlesLogic\bin\Debug\AMSLogic.dll</HintPath>
+    <Reference Include="AMSLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\AIMS-CAL\AIMS-CAL\CharlesLogic\bin\Debug\AMSLogic.dll</HintPath>
     </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
