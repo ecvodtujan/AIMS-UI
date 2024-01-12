@@ -113,14 +113,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AIMS.exe" size="8175104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AIMS.exe" size="8175616">
       <assemblyIdentity name="AIMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>TDx6Vq8Mtz14K77x+pG/2FxvjBQ=</dsig:DigestValue>
+        <dsig:DigestValue>bILdzkxTYsAY0MprjKQowlb10q8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -132,7 +132,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>WTev5bhUSt4zQT1+F6qVj9v6iVw=</dsig:DigestValue>
+        <dsig:DigestValue>gfFBFuhAWUtHu1OY2NzqLW1q6HI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

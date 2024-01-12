@@ -372,5 +372,37 @@ namespace AMS.Transaction.Request
         {
 
         }
+
+        private void print_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void delete_btn_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Proceed on deleting this record, Are you sure?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                System.Windows.Forms.DialogResult.No)
+            {
+                return;
+            }
+            _mode = 2;
+            ManageAssetDocument();
+        }
+
+        private void gvDoc_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) { return; }
+            try
+            {
+                RequestRepository _i = new RequestRepository();
+                _id = int.Parse(dgvDoc.Rows[e.RowIndex].Cells[0].Value.ToString());
+                DisplayRecord(_i.GetRequestDocument(_parent._id, _id));
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

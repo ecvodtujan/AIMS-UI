@@ -108,7 +108,8 @@
             this.delete_btn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.delete_btn.Name = "delete_btn";
             this.delete_btn.Size = new System.Drawing.Size(36, 36);
-            this.delete_btn.ToolTipText = "Deactivate record";
+            this.delete_btn.ToolTipText = "Delete Document";
+            this.delete_btn.Click += new System.EventHandler(this.delete_btn_Click);
             // 
             // print_btn
             // 
@@ -118,6 +119,7 @@
             this.print_btn.Name = "print_btn";
             this.print_btn.Size = new System.Drawing.Size(36, 36);
             this.print_btn.ToolTipText = "Print record";
+            this.print_btn.Click += new System.EventHandler(this.print_btn_Click);
             // 
             // save_btn
             // 
@@ -184,6 +186,7 @@
             this.dgvDoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDoc.Size = new System.Drawing.Size(773, 278);
             this.dgvDoc.TabIndex = 1102;
+            this.dgvDoc.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvDoc_CellClick);
             this.dgvDoc.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDoc_CellContentClick);
             // 
             // Column10
