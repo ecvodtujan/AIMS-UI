@@ -828,12 +828,14 @@ namespace AMS.Transaction.Request
         {
             string _any = "";
 
-           
+            RequestRepository _re = new RequestRepository();
             PurchaseOrderRepository _po = new PurchaseOrderRepository();
             INV_PURCHASE_HD _purch = _po.GetPurchaseHD(_id,_any);
+            INV_REQUEST _req = _re.GetRequest(_id);
           
 
             ReportViewerform _report = new ReportViewerform("REQUEST PRINT OUT");
+            _report._emp_id = _req.requested_by;
             _report._request_id = _id;
             _report._supplier = _purch.SYS_SUPPLIER.supplier_name;
             _report._total = txtTotalAmount.Text;

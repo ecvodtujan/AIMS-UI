@@ -151,9 +151,9 @@
             this.lblRequestid.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblRequestid.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRequestid.ForeColor = System.Drawing.Color.White;
-            this.lblRequestid.Location = new System.Drawing.Point(906, 0);
+            this.lblRequestid.Location = new System.Drawing.Point(929, 0);
             this.lblRequestid.Name = "lblRequestid";
-            this.lblRequestid.Size = new System.Drawing.Size(100, 21);
+            this.lblRequestid.Size = new System.Drawing.Size(77, 16);
             this.lblRequestid.TabIndex = 854;
             this.lblRequestid.Text = "Request id :";
             this.lblRequestid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -508,7 +508,7 @@
             this.txtOfficialreceipt.Location = new System.Drawing.Point(582, 27);
             this.txtOfficialreceipt.Name = "txtOfficialreceipt";
             this.txtOfficialreceipt.ReadOnly = true;
-            this.txtOfficialreceipt.Size = new System.Drawing.Size(128, 24);
+            this.txtOfficialreceipt.Size = new System.Drawing.Size(128, 21);
             this.txtOfficialreceipt.TabIndex = 1076;
             this.btxMsg.SetText(this.txtOfficialreceipt, "Invoice no. cannot be blank");
             this.txtOfficialreceipt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -521,7 +521,7 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(471, 31);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(128, 17);
+            this.label9.Size = new System.Drawing.Size(105, 13);
             this.label9.TabIndex = 1077;
             this.label9.Text = "Official Receipt no. :";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -548,7 +548,7 @@
             this.txtdepartment.Location = new System.Drawing.Point(111, 73);
             this.txtdepartment.Name = "txtdepartment";
             this.txtdepartment.ReadOnly = true;
-            this.txtdepartment.Size = new System.Drawing.Size(256, 24);
+            this.txtdepartment.Size = new System.Drawing.Size(256, 21);
             this.txtdepartment.TabIndex = 1074;
             this.btxMsg.SetText(this.txtdepartment, "Company name cannot be blank");
             this.btxMsg.SetTitle(this.txtdepartment, null);
@@ -561,7 +561,7 @@
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(32, 76);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 17);
+            this.label7.Size = new System.Drawing.Size(72, 13);
             this.label7.TabIndex = 1073;
             this.label7.Text = "Cost Center :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -572,7 +572,7 @@
             this.txtTotalAmount.Location = new System.Drawing.Point(819, 50);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.ReadOnly = true;
-            this.txtTotalAmount.Size = new System.Drawing.Size(127, 24);
+            this.txtTotalAmount.Size = new System.Drawing.Size(127, 21);
             this.txtTotalAmount.TabIndex = 1071;
             this.btxMsg.SetText(this.txtTotalAmount, "Invoice no. cannot be blank");
             this.txtTotalAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -586,7 +586,7 @@
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(736, 54);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 17);
+            this.label6.Size = new System.Drawing.Size(78, 13);
             this.label6.TabIndex = 1072;
             this.label6.Text = "Total Amount :";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -746,7 +746,7 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(33, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 17);
+            this.label1.Size = new System.Drawing.Size(73, 13);
             this.label1.TabIndex = 853;
             this.label1.Text = "Request no. :";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -757,7 +757,7 @@
             this.txtStatus.Location = new System.Drawing.Point(819, 139);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.ReadOnly = true;
-            this.txtStatus.Size = new System.Drawing.Size(127, 24);
+            this.txtStatus.Size = new System.Drawing.Size(127, 21);
             this.txtStatus.TabIndex = 892;
             this.btxMsg.SetText(this.txtStatus, "Invoice no. cannot be blank");
             this.txtStatus.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -769,7 +769,7 @@
             this.txtCompanyName.Location = new System.Drawing.Point(111, 50);
             this.txtCompanyName.Name = "txtCompanyName";
             this.txtCompanyName.ReadOnly = true;
-            this.txtCompanyName.Size = new System.Drawing.Size(256, 24);
+            this.txtCompanyName.Size = new System.Drawing.Size(256, 21);
             this.txtCompanyName.TabIndex = 902;
             this.btxMsg.SetText(this.txtCompanyName, "Company name cannot be blank");
             this.btxMsg.SetTitle(this.txtCompanyName, null);
@@ -782,7 +782,7 @@
             this.label22.ForeColor = System.Drawing.Color.Black;
             this.label22.Location = new System.Drawing.Point(726, 147);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 17);
+            this.label22.Size = new System.Drawing.Size(88, 13);
             this.label22.TabIndex = 895;
             this.label22.Text = "Request Status :";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -794,7 +794,7 @@
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(25, 32);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(102, 17);
+            this.label10.Size = new System.Drawing.Size(81, 13);
             this.label10.TabIndex = 852;
             this.label10.Text = "Requested by :";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -805,7 +805,7 @@
             this.txtCreatedby.Location = new System.Drawing.Point(819, 161);
             this.txtCreatedby.Name = "txtCreatedby";
             this.txtCreatedby.ReadOnly = true;
-            this.txtCreatedby.Size = new System.Drawing.Size(127, 24);
+            this.txtCreatedby.Size = new System.Drawing.Size(127, 21);
             this.txtCreatedby.TabIndex = 893;
             this.btxMsg.SetText(this.txtCreatedby, null);
             this.txtCreatedby.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -834,7 +834,7 @@
             this.label23.ForeColor = System.Drawing.Color.Black;
             this.label23.Location = new System.Drawing.Point(746, 167);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(85, 17);
+            this.label23.Size = new System.Drawing.Size(68, 13);
             this.label23.TabIndex = 894;
             this.label23.Text = "Created by :";
             this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -861,7 +861,7 @@
             this.txtInvoiceno.Location = new System.Drawing.Point(583, 50);
             this.txtInvoiceno.Name = "txtInvoiceno";
             this.txtInvoiceno.ReadOnly = true;
-            this.txtInvoiceno.Size = new System.Drawing.Size(127, 24);
+            this.txtInvoiceno.Size = new System.Drawing.Size(127, 21);
             this.txtInvoiceno.TabIndex = 15;
             this.btxMsg.SetText(this.txtInvoiceno, "Invoice no. cannot be blank");
             this.txtInvoiceno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -874,7 +874,7 @@
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(17, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 17);
+            this.label3.Size = new System.Drawing.Size(88, 13);
             this.label3.TabIndex = 904;
             this.label3.Text = "Company name :";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -886,7 +886,7 @@
             this.lblCVno.ForeColor = System.Drawing.Color.Black;
             this.lblCVno.Location = new System.Drawing.Point(473, 54);
             this.lblCVno.Name = "lblCVno";
-            this.lblCVno.Size = new System.Drawing.Size(134, 17);
+            this.lblCVno.Size = new System.Drawing.Size(104, 13);
             this.lblCVno.TabIndex = 891;
             this.lblCVno.Text = "Check Voucher no. :";
             this.lblCVno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -913,7 +913,7 @@
             this.dtpDateNeeded.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateNeeded.Location = new System.Drawing.Point(819, 28);
             this.dtpDateNeeded.Name = "dtpDateNeeded";
-            this.dtpDateNeeded.Size = new System.Drawing.Size(127, 24);
+            this.dtpDateNeeded.Size = new System.Drawing.Size(127, 21);
             this.dtpDateNeeded.TabIndex = 13;
             // 
             // txtRequestno
@@ -922,7 +922,7 @@
             this.txtRequestno.Location = new System.Drawing.Point(111, 5);
             this.txtRequestno.Name = "txtRequestno";
             this.txtRequestno.ReadOnly = true;
-            this.txtRequestno.Size = new System.Drawing.Size(98, 24);
+            this.txtRequestno.Size = new System.Drawing.Size(98, 21);
             this.txtRequestno.TabIndex = 0;
             this.btxMsg.SetText(this.txtRequestno, "Request no cannot be blank");
             this.txtRequestno.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -936,7 +936,7 @@
             this.label19.ForeColor = System.Drawing.Color.Black;
             this.label19.Location = new System.Drawing.Point(737, 33);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(96, 17);
+            this.label19.Size = new System.Drawing.Size(77, 13);
             this.label19.TabIndex = 884;
             this.label19.Text = "Date Needed :";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -947,7 +947,7 @@
             this.txtRequestedby.Location = new System.Drawing.Point(111, 28);
             this.txtRequestedby.Name = "txtRequestedby";
             this.txtRequestedby.ReadOnly = true;
-            this.txtRequestedby.Size = new System.Drawing.Size(256, 24);
+            this.txtRequestedby.Size = new System.Drawing.Size(256, 21);
             this.txtRequestedby.TabIndex = 2;
             this.btxMsg.SetText(this.txtRequestedby, "Requested by cannot be blank");
             this.btxMsg.SetTitle(this.txtRequestedby, null);
@@ -958,7 +958,7 @@
             this.txtCancelledDate.Location = new System.Drawing.Point(819, 111);
             this.txtCancelledDate.Name = "txtCancelledDate";
             this.txtCancelledDate.ReadOnly = true;
-            this.txtCancelledDate.Size = new System.Drawing.Size(127, 24);
+            this.txtCancelledDate.Size = new System.Drawing.Size(127, 21);
             this.txtCancelledDate.TabIndex = 21;
             this.btxMsg.SetText(this.txtCancelledDate, null);
             this.txtCancelledDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -971,7 +971,7 @@
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(50, 105);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(67, 17);
+            this.label8.Size = new System.Drawing.Size(53, 13);
             this.label8.TabIndex = 865;
             this.label8.Text = "Purpose :";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -983,7 +983,7 @@
             this.label17.ForeColor = System.Drawing.Color.Black;
             this.label17.Location = new System.Drawing.Point(729, 115);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(105, 17);
+            this.label17.Size = new System.Drawing.Size(85, 13);
             this.label17.TabIndex = 881;
             this.label17.Text = "Cancelled date :";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1008,7 +1008,7 @@
             this.txtCancelledby.Location = new System.Drawing.Point(819, 89);
             this.txtCancelledby.Name = "txtCancelledby";
             this.txtCancelledby.ReadOnly = true;
-            this.txtCancelledby.Size = new System.Drawing.Size(127, 24);
+            this.txtCancelledby.Size = new System.Drawing.Size(127, 21);
             this.txtCancelledby.TabIndex = 20;
             this.btxMsg.SetText(this.txtCancelledby, null);
             this.txtCancelledby.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1021,7 +1021,7 @@
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(50, 162);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 17);
+            this.label11.Size = new System.Drawing.Size(55, 13);
             this.label11.TabIndex = 869;
             this.label11.Text = "Remarks :";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1033,7 +1033,7 @@
             this.label18.ForeColor = System.Drawing.Color.Black;
             this.label18.Location = new System.Drawing.Point(739, 93);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(94, 17);
+            this.label18.Size = new System.Drawing.Size(75, 13);
             this.label18.TabIndex = 879;
             this.label18.Text = "Cancelled by :";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1057,7 +1057,7 @@
             this.txtReceivedDate.Location = new System.Drawing.Point(583, 161);
             this.txtReceivedDate.Name = "txtReceivedDate";
             this.txtReceivedDate.ReadOnly = true;
-            this.txtReceivedDate.Size = new System.Drawing.Size(127, 24);
+            this.txtReceivedDate.Size = new System.Drawing.Size(127, 21);
             this.txtReceivedDate.TabIndex = 19;
             this.btxMsg.SetText(this.txtReceivedDate, null);
             this.txtReceivedDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1070,7 +1070,7 @@
             this.dtpDateRquested.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDateRquested.Location = new System.Drawing.Point(819, 6);
             this.dtpDateRquested.Name = "dtpDateRquested";
-            this.dtpDateRquested.Size = new System.Drawing.Size(127, 24);
+            this.dtpDateRquested.Size = new System.Drawing.Size(127, 21);
             this.dtpDateRquested.TabIndex = 12;
             // 
             // label16
@@ -1080,7 +1080,7 @@
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.Location = new System.Drawing.Point(496, 166);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(103, 17);
+            this.label16.Size = new System.Drawing.Size(83, 13);
             this.label16.TabIndex = 877;
             this.label16.Text = "Received date :";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1093,7 +1093,7 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(722, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 17);
+            this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 854;
             this.label2.Text = "Date Requested :";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1104,7 +1104,7 @@
             this.txtReceivedBy.Location = new System.Drawing.Point(583, 139);
             this.txtReceivedBy.Name = "txtReceivedBy";
             this.txtReceivedBy.ReadOnly = true;
-            this.txtReceivedBy.Size = new System.Drawing.Size(127, 24);
+            this.txtReceivedBy.Size = new System.Drawing.Size(127, 21);
             this.txtReceivedBy.TabIndex = 18;
             this.btxMsg.SetText(this.txtReceivedBy, null);
             this.txtReceivedBy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1117,7 +1117,7 @@
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.Location = new System.Drawing.Point(506, 93);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(93, 17);
+            this.label13.Size = new System.Drawing.Size(73, 13);
             this.label13.TabIndex = 871;
             this.label13.Text = "Purchase by :";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1129,7 +1129,7 @@
             this.label15.ForeColor = System.Drawing.Color.Black;
             this.label15.Location = new System.Drawing.Point(506, 144);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(92, 17);
+            this.label15.Size = new System.Drawing.Size(73, 13);
             this.label15.TabIndex = 875;
             this.label15.Text = "Received by :";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1140,7 +1140,7 @@
             this.txtPurchaseby.Location = new System.Drawing.Point(583, 89);
             this.txtPurchaseby.Name = "txtPurchaseby";
             this.txtPurchaseby.ReadOnly = true;
-            this.txtPurchaseby.Size = new System.Drawing.Size(127, 24);
+            this.txtPurchaseby.Size = new System.Drawing.Size(127, 21);
             this.txtPurchaseby.TabIndex = 16;
             this.btxMsg.SetText(this.txtPurchaseby, null);
             this.txtPurchaseby.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1152,7 +1152,7 @@
             this.txtPurchaseDate.Location = new System.Drawing.Point(583, 111);
             this.txtPurchaseDate.Name = "txtPurchaseDate";
             this.txtPurchaseDate.ReadOnly = true;
-            this.txtPurchaseDate.Size = new System.Drawing.Size(127, 24);
+            this.txtPurchaseDate.Size = new System.Drawing.Size(127, 21);
             this.txtPurchaseDate.TabIndex = 17;
             this.btxMsg.SetText(this.txtPurchaseDate, null);
             this.txtPurchaseDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1165,7 +1165,7 @@
             this.label14.ForeColor = System.Drawing.Color.Black;
             this.label14.Location = new System.Drawing.Point(495, 116);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(106, 17);
+            this.label14.Size = new System.Drawing.Size(84, 13);
             this.label14.TabIndex = 873;
             this.label14.Text = "Purchase Date :";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -1279,7 +1279,7 @@
             // 
             // Requestform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 549);

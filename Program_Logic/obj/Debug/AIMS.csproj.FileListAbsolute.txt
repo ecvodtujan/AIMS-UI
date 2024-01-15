@@ -171,4 +171,3 @@ C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\obj\Debug\AIMS.csproj.Gen
 C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\obj\Debug\AIMS.exe.manifest
 C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\obj\Debug\AIMS.application
 C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\bin\Debug\AMSLogic.dll
-C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\obj\Debug\AIMS.csprojResolveAssemblyReference.cache

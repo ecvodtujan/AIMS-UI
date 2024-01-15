@@ -48,6 +48,8 @@ namespace AMS.Report
         CompanyRepository _comp = new CompanyRepository();
         //  SYS_COMPANY _empcomp = _comp.GetCompany()
         EmployeeRepository _e = new EmployeeRepository();
+
+        
         
         
 
@@ -59,13 +61,14 @@ namespace AMS.Report
 
         void DisplayReport()
         {
+            
             ReportDocument _reportdoc = new ReportDocument();
             EMP_EMPLOYEE _emp = _e.GetCompanybyEmployee(_emp_id);
             _companyid = _emp.company_id;
 
             ReportForm _form = new ReportForm();
 
-            string _report_path = @"\\192.168.20.21\it teamfiles\ZMG System\AIMS\Reports\";
+            string _report_path = @"\\192.168.20.21\Reports\";
 
 
             try
