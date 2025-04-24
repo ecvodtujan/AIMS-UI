@@ -10,10 +10,15 @@ using System.Windows.Forms;
 using QRCoder;
 using AMSLogic.Model;
 using System.IO;
+
 using ZXing;
 using ZXing.Common;
 using ZXing.QrCode.Internal;
 using ZXing.Rendering;
+
+//using Spire.Barcode;
+//using Spire.License;
+
 
 namespace AMS.MasterFile.Asset
 {
@@ -68,32 +73,65 @@ namespace AMS.MasterFile.Asset
                                 //"http://www.AIMS.wardhowell.com.ph/192.168.20.68/Asset/Information?GUID=" + _qrinformation._guid + System.Environment.NewLine;
                                 "http://www.AIMS.wardhowell.com.ph/Asset/Information?GUID=" + _qrinformation._guid + System.Environment.NewLine;
 
-                //QRCoder.QRCodeGenerator qr = new QRCoder.QRCodeGenerator();
-                //QRCodeData data = qr.CreateQrCode(_qrcode, QRCoder.QRCodeGenerator.ECCLevel.Q);
-                //QRCode code = new QRCode(data);                           
-                //picQR.Image = code.GetGraphic(5);
+                // QRCoder.QRCodeGenerator qr = new QRCoder.QRCodeGenerator();
+                // QRCodeData data = qr.CreateQrCode(_qrcode, QRCoder.QRCodeGenerator.ECCLevel.Q);
+                // QRCode code = new QRCode(data);
+                //// picQR.Image = code.GetGraphic(5);
+                // Bitmap bitmap = new Bitmap(@"/ZMGwhite.png");
+                // Color clr = bitmap.GetPixel(0, 0);
+                // Bitmap qrCodeImage = code.GetGraphic(20);
 
+             // current to 
+                                ////
+                                BarcodeWriter barcodeWriter = new BarcodeWriter();
+                                EncodingOptions encodingOptions = new EncodingOptions() { Width = 300, Height = 300, Margin = 0, PureBarcode = false };
+                                encodingOptions.Hints.Add(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
+                                barcodeWriter.Renderer = new BitmapRenderer();
+                                //{ Foreground = Color.FromArgb(8, 42, 94) };
+                                barcodeWriter.Options = encodingOptions;
+                                barcodeWriter.Format = BarcodeFormat.QR_CODE;
 
-                ////
-                BarcodeWriter barcodeWriter = new BarcodeWriter();
-                EncodingOptions encodingOptions = new EncodingOptions() { Width = 300, Height = 300, Margin = 0, PureBarcode = false };
-                encodingOptions.Hints.Add(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.H);
-                barcodeWriter.Renderer = new BitmapRenderer();
-                //{ Foreground = Color.FromArgb(8, 42, 94) };
-                barcodeWriter.Options = encodingOptions;
-                barcodeWriter.Format = BarcodeFormat.QR_CODE;
+                                Bitmap bitmap = barcodeWriter.Write(_qrcode);
+                                //string logopath = @"C:\Users\eclvillanueva\Pictures\zmg logo2.png";
+                                Bitmap logo = new Bitmap($"{Application.StartupPath}/ZMGwhite.png");
+                                //Bitmap logo = new Bitmap(logopath);
+                                Graphics g = Graphics.FromImage(bitmap);
 
-                Bitmap bitmap = barcodeWriter.Write(_qrcode);
-                //string logopath = @"C:\Users\eclvillanueva\Pictures\zmg logo2.png";
-                Bitmap logo = new Bitmap($"{Application.StartupPath}/ZMGwhite.png");
-                //Bitmap logo = new Bitmap(logopath);
-                Graphics g = Graphics.FromImage(bitmap);
+                                //int _width = (logo.Width - bitmap.Width ) / 2;
+                                //int _height = (logo.Height - bitmap.Height ) / 2;
 
-                //int _width = (logo.Width - bitmap.Width ) / 2;
-                //int _height = (logo.Height - bitmap.Height ) / 2;
+                                g.DrawImage(logo, new Point(  100, 120));
+                                picQR.Image = bitmap;
+                
+                /*
+      
+                            //    Load a license file if you have one
+                            //    LicenseProvider.SetLicenseFileFullPath("license.elic.xml");
+                             //   Spire.License.
 
-                g.DrawImage(logo, new Point(  100, 120));
-                picQR.Image = bitmap;
+                              //  Instantiate a BarcodeSettings object    //Spire barcode
+                                BarcodeSettings settings = new BarcodeSettings();
+
+                             //   Specify barcode type, data, etc.
+                                settings.Type = BarCodeType.QRCode;
+                                settings.QRCodeECL = QRCodeECL.M;
+                                settings.ShowText = false;
+                                settings.X = 2.5f;
+                                string data = _qrcode;
+                                settings.Data = data;
+                                settings.Data2D = data;
+
+                              //  Add an image to QR code
+                                settings.QRCodeLogoImage = Image.FromFile(@"C:\ZMG SYSDEV\ZMG SYSTEM\AIMS-UI\AIMS-UI\Program_Logic\bin\Debug\ZMGwhite.png");
+
+                             //   Instantiate a BarCodeGenerator object
+                                BarCodeGenerator generator = new BarCodeGenerator(settings);
+                             //   Generate QR image
+                           picQR.Image  = generator.GenerateImage();
+                             //   Save the image
+                          //      image.Save("QR.png", System.Drawing.Imaging.ImageFormat.Png);
+                            */ 
+
             }
             catch (Exception ex)
             {

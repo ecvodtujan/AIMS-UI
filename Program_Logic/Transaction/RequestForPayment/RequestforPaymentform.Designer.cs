@@ -39,6 +39,8 @@
             this.txtPurpose = new System.Windows.Forms.TextBox();
             this.post_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtSupplier = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -67,7 +69,7 @@
             // dtpDateRquested
             // 
             this.dtpDateRquested.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateRquested.Location = new System.Drawing.Point(26, 74);
+            this.dtpDateRquested.Location = new System.Drawing.Point(26, 117);
             this.dtpDateRquested.Name = "dtpDateRquested";
             this.dtpDateRquested.Size = new System.Drawing.Size(127, 21);
             this.dtpDateRquested.TabIndex = 1;
@@ -77,7 +79,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(23, 58);
+            this.label2.Location = new System.Drawing.Point(23, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 13);
             this.label2.TabIndex = 862;
@@ -87,7 +89,7 @@
             // txtTotalAmount
             // 
             this.txtTotalAmount.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtTotalAmount.Location = new System.Drawing.Point(253, 77);
+            this.txtTotalAmount.Location = new System.Drawing.Point(253, 120);
             this.txtTotalAmount.Name = "txtTotalAmount";
             this.txtTotalAmount.ReadOnly = true;
             this.txtTotalAmount.Size = new System.Drawing.Size(127, 21);
@@ -99,7 +101,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(250, 61);
+            this.label6.Location = new System.Drawing.Point(250, 104);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 13);
             this.label6.TabIndex = 1074;
@@ -111,7 +113,7 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(23, 98);
+            this.label8.Location = new System.Drawing.Point(23, 141);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 1076;
@@ -121,7 +123,7 @@
             // txtPurpose
             // 
             this.txtPurpose.BackColor = System.Drawing.Color.White;
-            this.txtPurpose.Location = new System.Drawing.Point(26, 114);
+            this.txtPurpose.Location = new System.Drawing.Point(26, 157);
             this.txtPurpose.Multiline = true;
             this.txtPurpose.Name = "txtPurpose";
             this.txtPurpose.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -137,7 +139,7 @@
             this.post_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
             this.post_btn.Image = ((System.Drawing.Image)(resources.GetObject("post_btn.Image")));
             this.post_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.post_btn.Location = new System.Drawing.Point(26, 235);
+            this.post_btn.Location = new System.Drawing.Point(26, 278);
             this.post_btn.Name = "post_btn";
             this.post_btn.Size = new System.Drawing.Size(354, 34);
             this.post_btn.TabIndex = 4;
@@ -153,19 +155,43 @@
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Image = ((System.Drawing.Image)(resources.GetObject("label3.Image")));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(0, 281);
+            this.label3.Location = new System.Drawing.Point(0, 326);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(400, 24);
             this.label3.TabIndex = 1085;
             this.label3.Text = "      Press Escape key to close";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(28, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 1087;
+            this.label4.Text = "Supplier :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtSupplier
+            // 
+            this.txtSupplier.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtSupplier.ForeColor = System.Drawing.Color.Black;
+            this.txtSupplier.Location = new System.Drawing.Point(26, 77);
+            this.txtSupplier.Name = "txtSupplier";
+            this.txtSupplier.ReadOnly = true;
+            this.txtSupplier.Size = new System.Drawing.Size(354, 21);
+            this.txtSupplier.TabIndex = 1086;
+            // 
             // RequestforPaymentform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(400, 305);
+            this.ClientSize = new System.Drawing.Size(400, 350);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtSupplier);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.post_btn);
             this.Controls.Add(this.label8);
@@ -203,5 +229,7 @@
         private System.Windows.Forms.TextBox txtPurpose;
         private System.Windows.Forms.Button post_btn;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtSupplier;
     }
 }

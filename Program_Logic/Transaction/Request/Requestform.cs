@@ -178,11 +178,11 @@ namespace AMS.Transaction.Request
                 txtRequestedby.Text = _obj.lastname + ", " + _obj.firstname;
                 txtRequestedby.Tag = _obj.id;
 
-                txtCompanyName.Text = _obj.SYS_COMPANY.description;
-                txtCompanyName.Tag = _obj.company_id.ToString();
+                //txtCompanyName.Text = _obj.SYS_COMPANY.description;
+                //txtCompanyName.Tag = _obj.company_id.ToString();
 
-                txtdepartment.Text = _obj.INV_DEPARTMENT.department;
-                txtdepartment.Tag = _obj.department_id.ToString();
+                //txtdepartment.Text = _obj.INV_DEPARTMENT.department;
+                //txtdepartment.Tag = _obj.department_id.ToString();
             }
 
         }

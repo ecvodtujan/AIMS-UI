@@ -1,5 +1,10 @@
 ﻿using AMSLogic.Transaction.Repository;
 using AMSLogic.Model;
+using AIMS.Inquiry;
+using AMS.Inquiry;
+
+using AMSLogic.Master.Repository;
+using AMS.MasterFile;
 
 using System;
 using System.Collections.Generic;
@@ -21,24 +26,33 @@ namespace AMS.Transaction.RequestForPayment
         string _selected_status = "";
         string _selected_request_no = "";
 
+      
+
         public RequestforPaymentMonitoring()
         {
             InitializeComponent();
         }
 
-        private void filter_btn_Click(object sender, EventArgs e)
+        public void filter_btn_Click(object sender, EventArgs e)
         {
             DisplayRecord();
         }
 
-        void DisplayRecord()
+        public void RefreshGrid()
+        {
+            DisplayRecord();
+            //_received.Close();
+            //MessageBox.Show("Request for payment successfully sent Approved.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+       public void DisplayRecord()
         {
             RequestRepository _i = new RequestRepository();
             dgvRequest.RowCount = 0;
             int n = 0;
             try
             {
-                List<UDSP_GET_REQUEST_FOR_PAYMENT_MONITORINGResult> _lists = _i.GetRequestForPaymentMonitoring();
+                List<UDSP_GET_REQUEST_FOR_PAYMENT_MONITORINGResult> _lists = _i.GetRequestForPaymentMonitoring(chkCompany.Checked,int.Parse(txtCompany.Tag.ToString()),chkByDate.Checked,dtpYearFrom.Value,dtpYearTo.Value,txtKeyword.Text);
                 if (_lists.Count != 0)
                 {
                     foreach (UDSP_GET_REQUEST_FOR_PAYMENT_MONITORINGResult _list in _lists)
@@ -46,25 +60,26 @@ namespace AMS.Transaction.RequestForPayment
                         //prb.Value = prb.Value + 1;
 
                         n = dgvRequest.Rows.Add();
-                        dgvRequest.Rows[n].Cells[0].Value = _list.ID.ToString();
+                        dgvRequest.Rows[n].Cells[0].Value = _list.id.ToString();
                         dgvRequest.Rows[n].Cells[1].Value = _list.request_id.ToString();
                         dgvRequest.Rows[n].Cells[2].Value = _list.request_no;
-                        dgvRequest.Rows[n].Cells[3].Value = _list.request_date.ToShortDateString();
-                        dgvRequest.Rows[n].Cells[4].Value = _list.reason;
-                        dgvRequest.Rows[n].Cells[5].Value = _list.Request_amount;
-                        dgvRequest.Rows[n].Cells[6].Value = _list.RequestBy;
+                        dgvRequest.Rows[n].Cells[3].Value = _list.request_date;
+                        dgvRequest.Rows[n].Cells[4].Value = _list.supplier;
+                        dgvRequest.Rows[n].Cells[5].Value = _list.reason;
+                        dgvRequest.Rows[n].Cells[6].Value = _list.request_amount;
+                        dgvRequest.Rows[n].Cells[7].Value = _list.employee_name;
 
-                        if (_list.received_date != null) { dgvRequest.Rows[n].Cells[7].Value = _list.received_date.Value.ToShortDateString(); }
-                        else { dgvRequest.Rows[n].Cells[7].Value = ""; }
-
-                        if (_list.reply_date != null) { dgvRequest.Rows[n].Cells[8].Value = _list.reply_date.Value.ToShortDateString(); }
+                        if (_list.received_date != null) { dgvRequest.Rows[n].Cells[8].Value = _list.received_date.Value.ToShortDateString(); }
                         else { dgvRequest.Rows[n].Cells[8].Value = ""; }
 
+                        if (_list.reply_date != null) { dgvRequest.Rows[n].Cells[9].Value = _list.reply_date.Value.ToShortDateString(); }
+                        else { dgvRequest.Rows[n].Cells[9].Value = ""; }
 
-                        dgvRequest.Rows[n].Cells[9].Value = _list.status;
 
-                        dgvRequest.Rows[n].Cells[10].Value = _list.check_no;
-                        dgvRequest.Rows[n].Cells[11].Value = _list.Remarks;
+                        dgvRequest.Rows[n].Cells[10].Value = _list.status;
+
+                        dgvRequest.Rows[n].Cells[11].Value = _list.check_no;
+                        dgvRequest.Rows[n].Cells[12].Value = _list.remarks;
                     }
                 }
                 else
@@ -85,6 +100,11 @@ namespace AMS.Transaction.RequestForPayment
             DisplayRecord();
         }
 
+        void Initializeform()
+        {
+
+        }
+
         private void dgvRequest_MouseDown(object sender, MouseEventArgs e)
         {
 
@@ -99,7 +119,7 @@ namespace AMS.Transaction.RequestForPayment
                     string _request_status = dgvRequest.Rows[rowIndex].Cells[8].Value.ToString();
 
                     _selected_id = Convert.ToInt32(dgvRequest.Rows[rowIndex].Cells[0].Value);
-                    _selected_status = dgvRequest.Rows[rowIndex].Cells[9].Value.ToString();
+                    _selected_status = dgvRequest.Rows[rowIndex].Cells[10].Value.ToString();
                     _selected_request_id = Convert.ToInt32( dgvRequest.Rows[rowIndex].Cells[1].Value.ToString());
 
                     _selected_request_no = dgvRequest.Rows[rowIndex].Cells[2].Value.ToString();
@@ -109,7 +129,14 @@ namespace AMS.Transaction.RequestForPayment
                         tsmReceive.Enabled = true;
                         tsmApprove.Enabled = false;
                     }
-                    else if (_selected_status != "Pending")
+                    //}
+                    //else if (_selected_status != "Pending")
+                    //{
+                    //    tsmReceive.Enabled = false;
+                    //    tsmApprove.Enabled = true;
+                    //}
+
+                    else if (_selected_status == "Received")
                     {
                         tsmReceive.Enabled = false;
                         tsmApprove.Enabled = true;
@@ -119,7 +146,8 @@ namespace AMS.Transaction.RequestForPayment
                     //    tsmReceive.Enabled = false;
                     //    tsmApprove.Enabled = false;
                     //}
-                    else 
+                    //else if (_selected_status == "Approved")
+                    else
                     {
                         tsmReceive.Enabled = false;
                         tsmApprove.Enabled = false;
@@ -137,17 +165,18 @@ namespace AMS.Transaction.RequestForPayment
         private void dgvRequest_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
         }
-
+        RequestforPaymentReceiveform _recv;
         private void tsmReceive_Click(object sender, EventArgs e)
         {
-            RequestforPaymentReceiveform _received = new RequestforPaymentReceiveform(_selected_id, _selected_request_id);
-            _received.BringToFront();
-            _received.ShowDialog();
+            _recv = new RequestforPaymentReceiveform(_selected_id, _selected_request_id, this);
+            _recv.BringToFront();
+            _recv.ShowDialog();
         }
 
+        RequestforPayementApprovalform _received;
         private void tsmApprove_Click(object sender, EventArgs e)
         {
-            RequestforPayementApprovalform _received = new RequestforPayementApprovalform(_selected_id, _selected_request_id);
+            _received = new RequestforPayementApprovalform(_selected_id, _selected_request_id, this);
             _received.BringToFront();
             _received.ShowDialog();
         }
@@ -186,6 +215,57 @@ namespace AMS.Transaction.RequestForPayment
         private void cmsEmp_Opening(object sender, CancelEventArgs e)
         {
 
+        }
+
+        private void btn_company_Click(object sender, EventArgs e)
+        {
+            if (!chkCompany.Checked) { return; }
+            Searchform _Searchform = new Searchform();
+            _Searchform._searchby = "COMPANY";
+            _Searchform.ShowDialog();
+
+            SYS_COMPANY _obj = _Searchform.ReturnSearchCompany;
+            if (_obj != null)
+            {
+                txtCompany.Text = _obj.description;
+                txtCompany.Tag = _obj.id;
+            }
+        }
+
+        private void dtpYearTo_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkByDate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkByDate.Checked == true)
+            {
+                dtpYearFrom.Enabled = true;
+                dtpYearTo.Enabled = true;
+
+            }
+            else
+            {
+                dtpYearFrom.Enabled = false;
+                dtpYearTo.Enabled = false;
+                dtpYearFrom.Value = DateTime.Now;
+                dtpYearTo.Value = DateTime.Now;
+            }
+
+        }
+
+        private void chkCompany_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkCompany.Checked == true)
+            {
+                btn_company.Enabled = true;
+            }
+            else
+            {
+                btn_company.Enabled = false;
+                txtCompany.Clear();
+            }
         }
     }
 }

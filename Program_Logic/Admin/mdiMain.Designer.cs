@@ -50,6 +50,7 @@ namespace AMS.Admin
             this.planMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.locationMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.hurisLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.requestItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.requestForPaymentMonitoringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -80,7 +81,7 @@ namespace AMS.Admin
             this.tsslUsername = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.hurisLinkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.decommissionMonitoringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.SuspendLayout();
@@ -134,7 +135,7 @@ namespace AMS.Admin
             this.newToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newToolStripMenuItem.Image")));
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.newToolStripMenuItem.Text = "Brand";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.ShowNewForm);
             // 
@@ -142,7 +143,7 @@ namespace AMS.Admin
             // 
             this.document_Menu.Image = ((System.Drawing.Image)(resources.GetObject("document_Menu.Image")));
             this.document_Menu.Name = "document_Menu";
-            this.document_Menu.Size = new System.Drawing.Size(161, 26);
+            this.document_Menu.Size = new System.Drawing.Size(157, 22);
             this.document_Menu.Text = "Document Type";
             this.document_Menu.Click += new System.EventHandler(this.document_Menu_Click);
             // 
@@ -150,7 +151,7 @@ namespace AMS.Admin
             // 
             this.itemTypeMenu.Image = ((System.Drawing.Image)(resources.GetObject("itemTypeMenu.Image")));
             this.itemTypeMenu.Name = "itemTypeMenu";
-            this.itemTypeMenu.Size = new System.Drawing.Size(161, 26);
+            this.itemTypeMenu.Size = new System.Drawing.Size(157, 22);
             this.itemTypeMenu.Text = "Item Type";
             this.itemTypeMenu.Click += new System.EventHandler(this.itemTypeMenu_Click);
             // 
@@ -158,7 +159,7 @@ namespace AMS.Admin
             // 
             this.empMenu.Image = ((System.Drawing.Image)(resources.GetObject("empMenu.Image")));
             this.empMenu.Name = "empMenu";
-            this.empMenu.Size = new System.Drawing.Size(161, 26);
+            this.empMenu.Size = new System.Drawing.Size(157, 22);
             this.empMenu.Text = "Employee";
             this.empMenu.Click += new System.EventHandler(this.empMenu_Click);
             // 
@@ -166,7 +167,7 @@ namespace AMS.Admin
             // 
             this.cmpMenu.Image = ((System.Drawing.Image)(resources.GetObject("cmpMenu.Image")));
             this.cmpMenu.Name = "cmpMenu";
-            this.cmpMenu.Size = new System.Drawing.Size(161, 26);
+            this.cmpMenu.Size = new System.Drawing.Size(157, 22);
             this.cmpMenu.Text = "Company";
             this.cmpMenu.Click += new System.EventHandler(this.cmpMenu_Click);
             // 
@@ -174,20 +175,20 @@ namespace AMS.Admin
             // 
             this.suppMenu.Image = ((System.Drawing.Image)(resources.GetObject("suppMenu.Image")));
             this.suppMenu.Name = "suppMenu";
-            this.suppMenu.Size = new System.Drawing.Size(161, 26);
+            this.suppMenu.Size = new System.Drawing.Size(157, 22);
             this.suppMenu.Text = "Supplier";
             this.suppMenu.Click += new System.EventHandler(this.suppMenu_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(158, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(154, 6);
             // 
             // userMenu
             // 
             this.userMenu.Image = ((System.Drawing.Image)(resources.GetObject("userMenu.Image")));
             this.userMenu.Name = "userMenu";
-            this.userMenu.Size = new System.Drawing.Size(161, 26);
+            this.userMenu.Size = new System.Drawing.Size(157, 22);
             this.userMenu.Text = "User";
             this.userMenu.Click += new System.EventHandler(this.userMenu_Click_1);
             // 
@@ -195,7 +196,7 @@ namespace AMS.Admin
             // 
             this.assetMenu.Image = ((System.Drawing.Image)(resources.GetObject("assetMenu.Image")));
             this.assetMenu.Name = "assetMenu";
-            this.assetMenu.Size = new System.Drawing.Size(161, 26);
+            this.assetMenu.Size = new System.Drawing.Size(157, 22);
             this.assetMenu.Text = "Asset";
             this.assetMenu.Click += new System.EventHandler(this.asseMenu_Click);
             // 
@@ -203,7 +204,7 @@ namespace AMS.Admin
             // 
             this.assetTagSeriesMasterfile.Image = ((System.Drawing.Image)(resources.GetObject("assetTagSeriesMasterfile.Image")));
             this.assetTagSeriesMasterfile.Name = "assetTagSeriesMasterfile";
-            this.assetTagSeriesMasterfile.Size = new System.Drawing.Size(161, 26);
+            this.assetTagSeriesMasterfile.Size = new System.Drawing.Size(157, 22);
             this.assetTagSeriesMasterfile.Text = "Asset Tag Series";
             this.assetTagSeriesMasterfile.Click += new System.EventHandler(this.assetTagSeriesMasterfile_Click);
             // 
@@ -211,7 +212,7 @@ namespace AMS.Admin
             // 
             this.deptMenu.Image = ((System.Drawing.Image)(resources.GetObject("deptMenu.Image")));
             this.deptMenu.Name = "deptMenu";
-            this.deptMenu.Size = new System.Drawing.Size(161, 26);
+            this.deptMenu.Size = new System.Drawing.Size(157, 22);
             this.deptMenu.Text = "Department";
             this.deptMenu.Click += new System.EventHandler(this.deptMenu_Click_1);
             // 
@@ -219,7 +220,7 @@ namespace AMS.Admin
             // 
             this.positionMenu.Image = ((System.Drawing.Image)(resources.GetObject("positionMenu.Image")));
             this.positionMenu.Name = "positionMenu";
-            this.positionMenu.Size = new System.Drawing.Size(161, 26);
+            this.positionMenu.Size = new System.Drawing.Size(157, 22);
             this.positionMenu.Text = "Position";
             this.positionMenu.Click += new System.EventHandler(this.positionMenu_Click);
             // 
@@ -227,7 +228,7 @@ namespace AMS.Admin
             // 
             this.reasonMenu.Image = ((System.Drawing.Image)(resources.GetObject("reasonMenu.Image")));
             this.reasonMenu.Name = "reasonMenu";
-            this.reasonMenu.Size = new System.Drawing.Size(161, 26);
+            this.reasonMenu.Size = new System.Drawing.Size(157, 22);
             this.reasonMenu.Text = "Reason";
             this.reasonMenu.Click += new System.EventHandler(this.reasonMenu_Click);
             // 
@@ -235,7 +236,7 @@ namespace AMS.Admin
             // 
             this.planMenu.Image = ((System.Drawing.Image)(resources.GetObject("planMenu.Image")));
             this.planMenu.Name = "planMenu";
-            this.planMenu.Size = new System.Drawing.Size(161, 26);
+            this.planMenu.Size = new System.Drawing.Size(157, 22);
             this.planMenu.Text = "Plan";
             this.planMenu.Click += new System.EventHandler(this.planMenu_Click);
             // 
@@ -243,14 +244,21 @@ namespace AMS.Admin
             // 
             this.locationMenu.Image = ((System.Drawing.Image)(resources.GetObject("locationMenu.Image")));
             this.locationMenu.Name = "locationMenu";
-            this.locationMenu.Size = new System.Drawing.Size(161, 26);
+            this.locationMenu.Size = new System.Drawing.Size(157, 22);
             this.locationMenu.Text = "Location";
             this.locationMenu.Click += new System.EventHandler(this.locationMenu_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(158, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(154, 6);
+            // 
+            // hurisLinkToolStripMenuItem
+            // 
+            this.hurisLinkToolStripMenuItem.Name = "hurisLinkToolStripMenuItem";
+            this.hurisLinkToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.hurisLinkToolStripMenuItem.Text = "Huris Link";
+            this.hurisLinkToolStripMenuItem.Click += new System.EventHandler(this.hurisLinkToolStripMenuItem_Click);
             // 
             // toolStripMenuItem2
             // 
@@ -260,7 +268,8 @@ namespace AMS.Admin
             this.mobileSubscriptionMonitoringToolStripMenuItem,
             this.repairMonitoringToolStripMenuItem,
             this.toolStripSeparator4,
-            this.prepaidCardMonitoringToolStripMenuItem});
+            this.prepaidCardMonitoringToolStripMenuItem,
+            this.decommissionMonitoringToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(79, 20);
             this.toolStripMenuItem2.Text = "Transaction";
@@ -270,7 +279,7 @@ namespace AMS.Admin
             // 
             this.requestItemToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("requestItemToolStripMenuItem.Image")));
             this.requestItemToolStripMenuItem.Name = "requestItemToolStripMenuItem";
-            this.requestItemToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.requestItemToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
             this.requestItemToolStripMenuItem.Text = "Request Monitoring";
             this.requestItemToolStripMenuItem.Click += new System.EventHandler(this.requestItemToolStripMenuItem_Click);
             // 
@@ -278,7 +287,7 @@ namespace AMS.Admin
             // 
             this.requestForPaymentMonitoringToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("requestForPaymentMonitoringToolStripMenuItem.Image")));
             this.requestForPaymentMonitoringToolStripMenuItem.Name = "requestForPaymentMonitoringToolStripMenuItem";
-            this.requestForPaymentMonitoringToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.requestForPaymentMonitoringToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
             this.requestForPaymentMonitoringToolStripMenuItem.Text = "Request for Payment Monitoring";
             this.requestForPaymentMonitoringToolStripMenuItem.Click += new System.EventHandler(this.requestForPaymentMonitoringToolStripMenuItem_Click);
             // 
@@ -286,24 +295,24 @@ namespace AMS.Admin
             // 
             this.mobileSubscriptionMonitoringToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("mobileSubscriptionMonitoringToolStripMenuItem.Image")));
             this.mobileSubscriptionMonitoringToolStripMenuItem.Name = "mobileSubscriptionMonitoringToolStripMenuItem";
-            this.mobileSubscriptionMonitoringToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.mobileSubscriptionMonitoringToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
             this.mobileSubscriptionMonitoringToolStripMenuItem.Text = "Mobile Subscription Monitoring";
             // 
             // repairMonitoringToolStripMenuItem
             // 
             this.repairMonitoringToolStripMenuItem.Name = "repairMonitoringToolStripMenuItem";
-            this.repairMonitoringToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.repairMonitoringToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
             this.repairMonitoringToolStripMenuItem.Text = "Repair Monitoring";
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(244, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(248, 6);
             // 
             // prepaidCardMonitoringToolStripMenuItem
             // 
             this.prepaidCardMonitoringToolStripMenuItem.Name = "prepaidCardMonitoringToolStripMenuItem";
-            this.prepaidCardMonitoringToolStripMenuItem.Size = new System.Drawing.Size(247, 22);
+            this.prepaidCardMonitoringToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
             this.prepaidCardMonitoringToolStripMenuItem.Text = "Prepaid Card Monitoring";
             // 
             // fileToolStripMenuItem
@@ -320,14 +329,14 @@ namespace AMS.Admin
             // purchaseMonitoringToolStripMenuItem1
             // 
             this.purchaseMonitoringToolStripMenuItem1.Name = "purchaseMonitoringToolStripMenuItem1";
-            this.purchaseMonitoringToolStripMenuItem1.Size = new System.Drawing.Size(230, 22);
+            this.purchaseMonitoringToolStripMenuItem1.Size = new System.Drawing.Size(234, 26);
             this.purchaseMonitoringToolStripMenuItem1.Text = "Purchase Monitoring";
             // 
             // deactivatedAssetMonitoringToolStripMenuItem
             // 
             this.deactivatedAssetMonitoringToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deactivatedAssetMonitoringToolStripMenuItem.Image")));
             this.deactivatedAssetMonitoringToolStripMenuItem.Name = "deactivatedAssetMonitoringToolStripMenuItem";
-            this.deactivatedAssetMonitoringToolStripMenuItem.Size = new System.Drawing.Size(230, 22);
+            this.deactivatedAssetMonitoringToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.deactivatedAssetMonitoringToolStripMenuItem.Text = "Deactivated Asset Monitoring";
             this.deactivatedAssetMonitoringToolStripMenuItem.Click += new System.EventHandler(this.deactivatedAssetMonitoringToolStripMenuItem_Click);
             // 
@@ -482,12 +491,12 @@ namespace AMS.Admin
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(10, 17);
             this.toolStripStatusLabel1.Text = "|";
             // 
-            // hurisLinkToolStripMenuItem
+            // decommissionMonitoringToolStripMenuItem
             // 
-            this.hurisLinkToolStripMenuItem.Name = "hurisLinkToolStripMenuItem";
-            this.hurisLinkToolStripMenuItem.Size = new System.Drawing.Size(161, 26);
-            this.hurisLinkToolStripMenuItem.Text = "Huris Link";
-            this.hurisLinkToolStripMenuItem.Click += new System.EventHandler(this.hurisLinkToolStripMenuItem_Click);
+            this.decommissionMonitoringToolStripMenuItem.Name = "decommissionMonitoringToolStripMenuItem";
+            this.decommissionMonitoringToolStripMenuItem.Size = new System.Drawing.Size(251, 26);
+            this.decommissionMonitoringToolStripMenuItem.Text = "Decommission Monitoring";
+            this.decommissionMonitoringToolStripMenuItem.Click += new System.EventHandler(this.decommissionMonitoringToolStripMenuItem_Click);
             // 
             // mdiMain
             // 
@@ -570,6 +579,7 @@ namespace AMS.Admin
         private System.Windows.Forms.ToolStripMenuItem byCompanyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem byDateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem hurisLinkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem decommissionMonitoringToolStripMenuItem;
     }
 }
 

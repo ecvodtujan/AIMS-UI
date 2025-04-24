@@ -30,8 +30,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.1.2.%2a</ApplicationVersion>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.1.5.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -97,8 +97,13 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="QRCoder">
-      <HintPath>..\..\..\..\..\ZMG SYSDEV\SHARED\WINFORM\QRCoder.dll</HintPath>
+    <Reference Include="QRCoder, Version=1.5.1.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.5.1\lib\net40\QRCoder.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spire.Barcode, Version=7.2.9.0, Culture=neutral, PublicKeyToken=663f351905198cb3, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spire.Barcode.7.3.2\lib\net40\Spire.Barcode.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -116,11 +121,13 @@
     <Reference Include="WindowsFormsToolkit">
       <HintPath>..\..\..\..\..\ZMG SYSDEV\SHARED\WINFORM\WindowsFormsToolkit.dll</HintPath>
     </Reference>
-    <Reference Include="zxing">
-      <HintPath>..\..\..\..\..\ZMG SYSDEV\SHARED\WINFORM\zxing.dll</HintPath>
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net40\zxing.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="zxing.presentation">
-      <HintPath>..\..\..\..\..\ZMG SYSDEV\SHARED\WINFORM\zxing.presentation.dll</HintPath>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZXing.Net.0.16.9\lib\net40\zxing.presentation.dll</HintPath>
+      <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -148,6 +155,12 @@
     </Compile>
     <Compile Include="Inquiry\AssetMonitoringform.Designer.cs">
       <DependentUpon>AssetMonitoringform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inquiry\DecommissionMonitoringform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inquiry\DecommissionMonitoringform.Designer.cs">
+      <DependentUpon>DecommissionMonitoringform.cs</DependentUpon>
     </Compile>
     <Compile Include="Inquiry\EmployeeMonitoringform.cs">
       <SubType>Form</SubType>
@@ -196,6 +209,12 @@
     </Compile>
     <Compile Include="Inquiry\Searchform.Designer.cs">
       <DependentUpon>Searchform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterFile\PrintAccountabilityform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MasterFile\PrintAccountabilityform.Designer.cs">
+      <DependentUpon>PrintAccountabilityform.cs</DependentUpon>
     </Compile>
     <Compile Include="MasterFile\HurisLinkMasterform.cs">
       <SubType>Form</SubType>
@@ -391,6 +410,24 @@
     <Compile Include="Transaction\Deactivate\AssetDeactivateform.Designer.cs">
       <DependentUpon>AssetDeactivateform.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\Decommission\AssetDecommissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Decommission\AssetDecommissionForm.Designer.cs">
+      <DependentUpon>AssetDecommissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Decommission\AddDecommissionDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Decommission\AddDecommissionDetails.Designer.cs">
+      <DependentUpon>AddDecommissionDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Decommission\Decommissionform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Decommission\Decommissionform.Designer.cs">
+      <DependentUpon>Decommissionform.cs</DependentUpon>
+    </Compile>
     <Compile Include="Transaction\GatePass\GatePassMasterform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -517,6 +554,9 @@
     <EmbeddedResource Include="Inquiry\DeactivatedAssetMonitoringform.resx">
       <DependentUpon>DeactivatedAssetMonitoringform.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inquiry\DecommissionMonitoringform.resx">
+      <DependentUpon>DecommissionMonitoringform.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inquiry\EmployeeMonitoringform.resx">
       <DependentUpon>EmployeeMonitoringform.cs</DependentUpon>
     </EmbeddedResource>
@@ -534,6 +574,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inquiry\Searchform.resx">
       <DependentUpon>Searchform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterFile\PrintAccountabilityform.resx">
+      <DependentUpon>PrintAccountabilityform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MasterFile\HurisLinkMasterform.resx">
       <DependentUpon>HurisLinkMasterform.cs</DependentUpon>
@@ -640,6 +683,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\Deactivate\AssetDeactivateform.resx">
       <DependentUpon>AssetDeactivateform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Decommission\AssetDecommissionForm.resx">
+      <DependentUpon>AssetDecommissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Decommission\AddDecommissionDetails.resx">
+      <DependentUpon>AddDecommissionDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Decommission\Decommissionform.resx">
+      <DependentUpon>Decommissionform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transaction\GatePass\GatePassMasterform.resx">
       <DependentUpon>GatePassMasterform.cs</DependentUpon>

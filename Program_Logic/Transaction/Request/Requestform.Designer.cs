@@ -550,7 +550,7 @@
             this.txtdepartment.ReadOnly = true;
             this.txtdepartment.Size = new System.Drawing.Size(256, 21);
             this.txtdepartment.TabIndex = 1074;
-            this.btxMsg.SetText(this.txtdepartment, "Company name cannot be blank");
+            this.btxMsg.SetText(this.txtdepartment, "Cost Center cannot be blanked");
             this.btxMsg.SetTitle(this.txtdepartment, null);
             this.txtdepartment.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -771,7 +771,7 @@
             this.txtCompanyName.ReadOnly = true;
             this.txtCompanyName.Size = new System.Drawing.Size(256, 21);
             this.txtCompanyName.TabIndex = 902;
-            this.btxMsg.SetText(this.txtCompanyName, "Company name cannot be blank");
+            this.btxMsg.SetText(this.txtCompanyName, "Company name cannot be blanked");
             this.btxMsg.SetTitle(this.txtCompanyName, null);
             this.txtCompanyName.TextChanged += new System.EventHandler(this.txtCompanyName_TextChanged);
             // 

@@ -493,5 +493,13 @@ namespace AMS.Admin
             _doc.Show();
 
         }
+
+        private void decommissionMonitoringToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DecommissionMonitoringform _monitoring = new DecommissionMonitoringform();
+            _monitoring.MdiParent = this;
+            _monitoring.BringToFront();
+            _monitoring.Show();
+        }
     }
 }

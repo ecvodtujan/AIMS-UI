@@ -9,6 +9,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using AMS.Transaction.RequestForPayment;
 
 namespace AMS.Transaction.RequestForPayment
 {
@@ -17,11 +18,15 @@ namespace AMS.Transaction.RequestForPayment
         int _request_id = 0;
         int _id = 0;
 
-        public RequestforPayementApprovalform(int Id, int RequestId)
+        RequestforPaymentMonitoring _paymentmonitor;
+         
+
+        public RequestforPayementApprovalform(int Id, int RequestId, RequestforPaymentMonitoring _Payment)
         {
             InitializeComponent();
             _id = Id;
             _request_id = RequestId;
+            _paymentmonitor = _Payment;
         }
 
         private void post_btn_Click(object sender, EventArgs e)
@@ -59,6 +64,8 @@ namespace AMS.Transaction.RequestForPayment
 
                 MessageBox.Show("Request for payment successfully sent Approved.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                _paymentmonitor.RefreshGrid();
+            
             }
             catch (Exception ex)
             {

@@ -90,10 +90,14 @@ namespace AMS.Transaction.RequestForPayment
                     _mode = 0;
                     _id = 0;
                     RequestRepository _i = new RequestRepository();
+                    PurchaseOrderRepository _po = new PurchaseOrderRepository();
                     INV_REQUEST _request = _i.GetRequest(_request_id);
+                    INV_PURCHASE_HD _purchase = _po.GetPurchaseHD(_request_id, "");
                     if (_request != null)
                     {
                         txtRequestno.Text = _request.request_no;
+                        txtPurpose.Text = _request.purpose;
+                        txtSupplier.Text = _purchase.SYS_SUPPLIER.supplier_name;
                     }
                 }
                 

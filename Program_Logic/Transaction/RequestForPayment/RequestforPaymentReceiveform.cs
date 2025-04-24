@@ -17,12 +17,15 @@ namespace AMS.Transaction.RequestForPayment
         int _requestid = 0;
         string _request_no = "";
 
-        public RequestforPaymentReceiveform(int Id, int RequestId)
+        RequestforPaymentMonitoring _paymentmonitor;
+
+        public RequestforPaymentReceiveform(int Id, int RequestId, RequestforPaymentMonitoring _Paymentmonitor)
         {
             InitializeComponent();
 
             _id = Id;
             _requestid = RequestId;
+            _paymentmonitor = _Paymentmonitor;
         }
 
         private void RequestforPaymentReceiveform_Load(object sender, EventArgs e)
@@ -88,6 +91,8 @@ namespace AMS.Transaction.RequestForPayment
 
                 MessageBox.Show("Request for payment successfully received by accounting.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
+                _paymentmonitor.RefreshGrid();
+
             }
             catch (Exception ex)
             {

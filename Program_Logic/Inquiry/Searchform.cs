@@ -31,6 +31,8 @@ namespace AMS.Inquiry
         DocumentTypeRepository _documentrepo = new DocumentTypeRepository();
         PositionRepository _postrepo = new PositionRepository();
         ReasonRepository _reasonrepo = new ReasonRepository();
+        DecommissionRepository _decomrepo = new DecommissionRepository();
+        LocationRepository _locationrepo = new LocationRepository();
 
         #region ReturnValue
         public SYS_BRAND ReturnSearchBrand
@@ -78,6 +80,14 @@ namespace AMS.Inquiry
         public SYS_REASON ReturnSearchReason
         {
             get { return _id == 0 ? null : _reasonrepo.GetReason(_id); }
+        }
+        public INV_DECOMMISSION_REQUEST_TYPE ReturnSearchRequesttype
+        {
+            get { return _id == 0 ? null : _decomrepo.GetDecommRequestType(_id); }
+        }
+        public SYS_LOCATION ReturnSearchLocation
+        {
+            get { return _id == 0 ? null : _locationrepo.GetLocation(_id); }
         }
         #endregion
 
@@ -156,6 +166,16 @@ namespace AMS.Inquiry
                 {
                     lsvList.Columns.Add("id", 0, HorizontalAlignment.Left);
                     lsvList.Columns.Add("Reason Description", 200, HorizontalAlignment.Left);
+                }
+                else if (_searchby == "DECOMMISSION REQUEST TYPE" )
+                {
+                    lsvList.Columns.Add("id", 0, HorizontalAlignment.Left);
+                    lsvList.Columns.Add("Request type", 200, HorizontalAlignment.Left);
+                }
+                else if (_searchby == "LOCATION")
+                {
+                    lsvList.Columns.Add("id", 0, HorizontalAlignment.Left);
+                    lsvList.Columns.Add("Location", 200, HorizontalAlignment.Left);
                 }
             }
             catch (Exception ex)
@@ -318,6 +338,26 @@ namespace AMS.Inquiry
                         lsvList.Items.Add(_item);
                     }
                 }
+                else if (_searchby == "DECOMMISSION REQUEST TYPE")
+                {
+                    List<INV_DECOMMISSION_REQUEST_TYPE> _lists = _decomrepo.GetDecommissionRequestType(txtKeyword.Text);
+                    foreach (INV_DECOMMISSION_REQUEST_TYPE _list in _lists)
+                    {
+                        ListViewItem _item = new ListViewItem(_list.id.ToString());
+                        _item.SubItems.Add(_list.description);
+                        lsvList.Items.Add(_item);
+                    }
+                }
+                else if (_searchby == "LOCATION")
+                {
+                    List<SYS_LOCATION> _lists = _locationrepo.GetLocations(txtKeyword.Text);
+                    foreach (SYS_LOCATION _list in _lists)
+                    {
+                        ListViewItem _item = new ListViewItem(_list.id.ToString());
+                        _item.SubItems.Add(_list.location);
+                        lsvList.Items.Add(_item);
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -422,6 +462,18 @@ namespace AMS.Inquiry
                 else if (_searchby =="REASON" || _searchby == "REASON BY CLASS")
                 {
                     ReasonMasterform _reason = new ReasonMasterform();
+                    _reason.BringToFront();
+                    _reason.ShowDialog();
+                }
+                else if (_searchby == "DECOMMISSION REQUEST TYPE")
+                {
+                    ReasonMasterform _reason = new ReasonMasterform();
+                    _reason.BringToFront();
+                    _reason.ShowDialog();
+                }
+                else if (_searchby == "LOCATION")
+                {
+                    LocationMasterform _reason = new LocationMasterform();
                     _reason.BringToFront();
                     _reason.ShowDialog();
                 }

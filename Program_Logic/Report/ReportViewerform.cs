@@ -22,6 +22,7 @@ namespace AMS.Report
         public int _request_id = 0;
         public int _plan_id = 0;
         public int _emp_id = 0;
+        public int _asset_id = 0;
 
         public int _companyid = 0;
 
@@ -68,8 +69,7 @@ namespace AMS.Report
 
             ReportForm _form = new ReportForm();
 
-            string _report_path = @"\\192.168.20.21\Reports\";
-
+            string _report_path = @"\\192.168.20.23\zmg system\ZMG\ASSET\Reports\";
 
             try
             {
@@ -153,28 +153,35 @@ namespace AMS.Report
                     goto Report_Path;
                 }
                 else if (_reporttype == "ACCOUNTABILITY PRINT OUT")
-                {
-                    if (_companyid == 1 || _companyid == 7)   //ZMG and APS accountability
-                    {
-                        _reportdoc.Load(_report_path + @"ZMGAccountabilityForm.rpt");
-                        _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
-                        goto Report_Path;
-                    }
-                    else if(_companyid == 3 || _companyid == 11)  // apw and apwtech
-                    {
-                        _reportdoc.Load(_report_path + @"APWAccountabilityForm.rpt");
-                        _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
-                        goto Report_Path;
-                    }
-                    else if (_companyid == 8)  // asiaselect
-                    {
-                        _reportdoc.Load(_report_path + @"ASIAccountabilityForm.rpt");
-                        _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
-                        goto Report_Path;
-                    }
+                {                
+                    _reportdoc.Load(_report_path + @"ZMGGroupAccountabilityForm.rpt");
+                    _reportdoc.DataDefinition.FormulaFields["asset_id"].Text = "" + _asset_id + ""; 
+                    _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
+                    goto Report_Path;
 
                 }
+                else if (_reporttype == "ACCOUNTABILITY PRINT OUT ALL")
+                {
+                    //if (_companyid == 1 || _companyid == 7)   //ZMG and APS accountability
+                    //{
+                    //    _reportdoc.Load(_report_path + @"ZMGAccountabilityForm.rpt");
+                    //    _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
+                    //    goto Report_Path;
+                    //}
+                    //else if (_companyid == 3 || _companyid == 11)  // apw and apwtech
+                    //{
+                    //    _reportdoc.Load(_report_path + @"APWAccountabilityForm.rpt");
+                    //    _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
+                    //    goto Report_Path;
+                    //}
+                    //else if (_companyid == 8)  // asiaselect
+                    //{
+                    //    _reportdoc.Load(_report_path + @"ASIAccountabilityForm.rpt");
+                    //    _reportdoc.DataDefinition.FormulaFields["employee_id"].Text = "" + _emp_id + "";
+                    //    goto Report_Path;
+                    //}
 
+                }
                 else if (_reporttype == "ASSET REPORT BY COMPANY")
                 {
                     if (_company == "ZMG")
@@ -275,7 +282,7 @@ namespace AMS.Report
                 }
 
                 Report_Path:                
-                    SetReportDataSource("58.71.51.237", "INV_DB", "Zmgsqluser", "zmgSQLu$er2016**", _reportdoc);
+                    SetReportDataSource("192.168.20.23", "INV_DB", "Zmgsqluser", "zmgSQLu$er2016**", _reportdoc);
                 
                     CrysViewer.ReportSource = _reportdoc;
                     CrysViewer.Refresh();

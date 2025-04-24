@@ -327,10 +327,16 @@ namespace AMS.MasterFile.Employee
             //_report.BringToFront();
             //_report.Show();
 
-            ReportViewerform _report = new ReportViewerform("ACCOUNTABILITY PRINT OUT");
+          /*  ReportViewerform _report = new ReportViewerform("ACCOUNTABILITY PRINT OUT");
             _report._emp_id = _parent._emp_id;
             _report.BringToFront();
-            _report.Show();
+            _report.Show(); */
+
+
+            PrintAccountabilityform _print = new PrintAccountabilityform(_parent._emp_id);
+            _print.BringToFront();
+            _print.ShowDialog();
+            //_print.Show();
 
         }
 

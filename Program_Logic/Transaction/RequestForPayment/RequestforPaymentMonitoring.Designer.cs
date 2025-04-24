@@ -49,6 +49,7 @@
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewLinkColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +70,11 @@
             this.tsmReceive = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmApprove = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkByDate = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpYearTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpYearFrom = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRequest)).BeginInit();
             this.cmsEmp.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -98,6 +104,7 @@
             this.Column11,
             this.Column1,
             this.Column3,
+            this.Column13,
             this.Column9,
             this.Column7,
             this.Column12,
@@ -123,7 +130,7 @@
             dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Navy;
             this.dgvRequest.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dgvRequest.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRequest.Size = new System.Drawing.Size(1249, 453);
+            this.dgvRequest.Size = new System.Drawing.Size(1248, 453);
             this.dgvRequest.TabIndex = 1070;
             this.dgvRequest.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRequest_CellContentClick);
             this.dgvRequest.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRequest_CellMouseDown);
@@ -165,6 +172,13 @@
             this.Column3.ReadOnly = true;
             this.Column3.Width = 70;
             // 
+            // Column13
+            // 
+            this.Column13.HeaderText = "Supplier Name";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Width = 175;
+            // 
             // Column9
             // 
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -194,7 +208,6 @@
             this.Column12.HeaderText = "Requested by";
             this.Column12.Name = "Column12";
             this.Column12.ReadOnly = true;
-            this.Column12.Width = 150;
             // 
             // Column8
             // 
@@ -226,6 +239,7 @@
             this.Column6.HeaderText = "Status";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 80;
             // 
             // Column4
             // 
@@ -244,7 +258,7 @@
             this.Column5.HeaderText = "Remarks";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 200;
+            this.Column5.Width = 150;
             // 
             // txtCompany
             // 
@@ -252,24 +266,26 @@
             this.txtCompany.Location = new System.Drawing.Point(114, 13);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.ReadOnly = true;
-            this.txtCompany.Size = new System.Drawing.Size(392, 21);
+            this.txtCompany.Size = new System.Drawing.Size(317, 21);
             this.txtCompany.TabIndex = 1073;
             this.txtCompany.Tag = "0";
             // 
             // btn_company
             // 
             this.btn_company.BackColor = System.Drawing.Color.White;
+            this.btn_company.Enabled = false;
             this.btn_company.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_company.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
             this.btn_company.Image = ((System.Drawing.Image)(resources.GetObject("btn_company.Image")));
             this.btn_company.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_company.Location = new System.Drawing.Point(509, 10);
+            this.btn_company.Location = new System.Drawing.Point(439, 10);
             this.btn_company.Name = "btn_company";
             this.btn_company.Size = new System.Drawing.Size(100, 25);
             this.btn_company.TabIndex = 1072;
             this.btn_company.Text = "      Search";
             this.btn_company.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_company.UseVisualStyleBackColor = false;
+            this.btn_company.Click += new System.EventHandler(this.btn_company_Click);
             // 
             // chkCompany
             // 
@@ -282,20 +298,21 @@
             this.chkCompany.TabIndex = 1071;
             this.chkCompany.Text = "Company :";
             this.chkCompany.UseVisualStyleBackColor = false;
+            this.chkCompany.CheckedChanged += new System.EventHandler(this.chkCompany_CheckedChanged);
             // 
             // txtKeyword
             // 
             this.txtKeyword.BackColor = System.Drawing.Color.White;
             this.txtKeyword.Location = new System.Drawing.Point(114, 41);
             this.txtKeyword.Name = "txtKeyword";
-            this.txtKeyword.Size = new System.Drawing.Size(392, 21);
+            this.txtKeyword.Size = new System.Drawing.Size(317, 21);
             this.txtKeyword.TabIndex = 1076;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(18, 46);
+            this.label14.Location = new System.Drawing.Point(36, 46);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(56, 13);
             this.label14.TabIndex = 1075;
@@ -308,7 +325,7 @@
             this.filter_btn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(184)))), ((int)(((byte)(92)))));
             this.filter_btn.Image = ((System.Drawing.Image)(resources.GetObject("filter_btn.Image")));
             this.filter_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.filter_btn.Location = new System.Drawing.Point(509, 39);
+            this.filter_btn.Location = new System.Drawing.Point(439, 39);
             this.filter_btn.Name = "filter_btn";
             this.filter_btn.Size = new System.Drawing.Size(99, 24);
             this.filter_btn.TabIndex = 1074;
@@ -325,7 +342,7 @@
             this.tsmReceive,
             this.tsmApprove});
             this.cmsEmp.Name = "cmsEmp";
-            this.cmsEmp.Size = new System.Drawing.Size(232, 98);
+            this.cmsEmp.Size = new System.Drawing.Size(232, 76);
             this.cmsEmp.Opening += new System.ComponentModel.CancelEventHandler(this.cmsEmp_Opening);
             // 
             // toolStripMenuItem1
@@ -359,6 +376,11 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chkByDate);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.dtpYearTo);
+            this.panel1.Controls.Add(this.dtpYearFrom);
             this.panel1.Controls.Add(this.chkCompany);
             this.panel1.Controls.Add(this.btn_company);
             this.panel1.Controls.Add(this.txtKeyword);
@@ -368,15 +390,71 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1249, 89);
+            this.panel1.Size = new System.Drawing.Size(1248, 89);
             this.panel1.TabIndex = 1077;
+            // 
+            // chkByDate
+            // 
+            this.chkByDate.AutoSize = true;
+            this.chkByDate.BackColor = System.Drawing.Color.Transparent;
+            this.chkByDate.ForeColor = System.Drawing.Color.Black;
+            this.chkByDate.Location = new System.Drawing.Point(566, 15);
+            this.chkByDate.Name = "chkByDate";
+            this.chkByDate.Size = new System.Drawing.Size(71, 17);
+            this.chkByDate.TabIndex = 1095;
+            this.chkByDate.Text = "By Date :";
+            this.chkByDate.UseVisualStyleBackColor = false;
+            this.chkByDate.CheckedChanged += new System.EventHandler(this.chkByDate_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(782, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.TabIndex = 1094;
+            this.label2.Text = "To :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(638, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 1093;
+            this.label1.Text = "From :";
+            // 
+            // dtpYearTo
+            // 
+            this.dtpYearTo.CustomFormat = "yyyy";
+            this.dtpYearTo.Enabled = false;
+            this.dtpYearTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpYearTo.Location = new System.Drawing.Point(810, 12);
+            this.dtpYearTo.Name = "dtpYearTo";
+            this.dtpYearTo.ShowUpDown = true;
+            this.dtpYearTo.Size = new System.Drawing.Size(89, 21);
+            this.dtpYearTo.TabIndex = 1092;
+            this.dtpYearTo.ValueChanged += new System.EventHandler(this.dtpYearTo_ValueChanged);
+            // 
+            // dtpYearFrom
+            // 
+            this.dtpYearFrom.CustomFormat = "yyyy";
+            this.dtpYearFrom.Enabled = false;
+            this.dtpYearFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpYearFrom.Location = new System.Drawing.Point(679, 12);
+            this.dtpYearFrom.Name = "dtpYearFrom";
+            this.dtpYearFrom.ShowUpDown = true;
+            this.dtpYearFrom.Size = new System.Drawing.Size(91, 21);
+            this.dtpYearFrom.TabIndex = 1091;
             // 
             // RequestforPaymentMonitoring
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1249, 542);
+            this.ClientSize = new System.Drawing.Size(1248, 542);
             this.Controls.Add(this.dgvRequest);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -404,17 +482,22 @@
         private System.Windows.Forms.CheckBox chkCompany;
         private System.Windows.Forms.TextBox txtKeyword;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button filter_btn;
         private System.Windows.Forms.ContextMenuStrip cmsEmp;
         private System.Windows.Forms.ToolStripMenuItem tsmReceive;
         private System.Windows.Forms.ToolStripMenuItem tsmApprove;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DateTimePicker dtpYearTo;
+        private System.Windows.Forms.DateTimePicker dtpYearFrom;
+        private System.Windows.Forms.CheckBox chkByDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewLinkColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
@@ -423,5 +506,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        public System.Windows.Forms.Button filter_btn;
     }
 }
